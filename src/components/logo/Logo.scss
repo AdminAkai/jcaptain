@@ -1,55 +1,75 @@
-body {
-    background: black;
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glitch {
+	font: {
+		size: 5.125em;
     font-family: "Varela", sans-serif;
+		weight: 600;
   }
-  
-  .glitch {
-    color: white;
-    font-size: 100px;
-    position: relative;
-    width: 400px;
-    margin: 0 auto;
-  }
-  @keyframes noise-anim {
-    $steps: 20;
-    @for $i from 0 through $steps {
-      #{percentage($i*(1/$steps))} {
-        $top: random(100);
-        $bottom: random(101 - $top);
-        clip-path: inset(#{$top}% 0 #{$bottom}%  0);
-      }
-    }
-  }
-  .glitch::after {
-    content: attr(data-text);
-    position: absolute;
-    left: 2px;
-    text-shadow: -1px 0 red;
-    top: 0;
-    color: white;
-    background: black;
-    overflow: hidden;
-    animation: noise-anim 2s infinite linear alternate-reverse;
-  }
-  
-  @keyframes noise-anim-2 {
-    $steps: 20;
-    @for $i from 0 through $steps {
-      #{percentage($i*(1/$steps))} {
-        $top: random(100);
-        $bottom: random(101 - $top);
-        clip-path: inset(#{$top}% 0 #{$bottom}%  0);
-      }
-    }
-  }
-  .glitch::before {
-    content: attr(data-text);
-    position: absolute;
-    left: -2px;
-    text-shadow: 1px 0 blue;
-    top: 0;
-    color: white;
-    background: black;
-    overflow: hidden;
-    animation: noise-anim-2 15s infinite linear alternate-reverse;
-  }
+  text-transform: uppercase;
+	text-decoration: none;
+	position: absolute;
+	top: 460px;
+	left: 910px;
+	transform: translate(-50%, -50%);
+	margin: 0;
+	color: #fff;
+	letter-spacing: 0.01em;
+	
+	&:before, &:after {
+		display: block;
+		content: attr(data-glitch);
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		opacity: .8;
+	} &:after {
+		color: #f0f;
+		z-index: -2;
+	} &:before {
+		color: #0ff;
+		z-index: -1;
+	}
+	&:hover {
+		&:before {
+			animation: glitch .3s cubic-bezier(.25, .46, .45, .94) both 5
+		}
+		&:after {
+			animation: glitch .3s cubic-bezier(.25, .46, .45, .94) reverse both 5
+		}
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.glitch {
+		font-size: 3em;
+	}
+}
+
+
+@keyframes glitch {
+	0% {
+		transform: translate(0)
+	}
+	20% {
+		transform: translate(-5px, 5px)
+	}
+	40% {
+		transform: translate(-5px, -5px)
+	}
+	60% {
+		transform: translate(5px, 5px)
+	}
+	80% {
+		transform: translate(5px, -5px)
+	}
+	to {
+		transform: translate(0)
+	}
+}
