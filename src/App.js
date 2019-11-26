@@ -11,11 +11,11 @@ function App() {
   return (
     <div className="App">
       <div>
-        {console.log(ParticleParams)}
       </div>
       <div>
         <Particles params={ParticleParams} className='particles' /> 
         <Logo />
+        <DropDown />
       </div>
     </div>
   );

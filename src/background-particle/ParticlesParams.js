@@ -12,15 +12,15 @@ const ParticleParams = {
         line_linked: {
             enable: true,
             distance: 50,
-            opacity: 1  
+            opacity: 2
         },
         move: {
-            speed: 1
+            speed: 2
         },
         opacity: {
             anim: {
                 enable: true,
-                opacity_min: 0.05,
+                opacity_min: 0.5,
                 speed: 2,
                 sync: true
             },
@@ -32,45 +32,14 @@ const ParticleParams = {
         scale: 2,
         type: "inline",
         move: {
-            radius: 2
+            radius: 5
         },
         url: imagesvg,
         inline: {
             arrangement: "equidistant"
         },
-        // draw: {
-        //     enable: true,
-        //     stroke: {
-        //         color: "rgba(255, 255, 255, .2)"
-        //     }
-        // }
     },
     retina_detect: true,
-    interactivity: {
-        events: {
-            onhover: {
-                enable: true,
-                mode: "bubble"
-            }
-        },
-        modes: {
-            bubble: {
-                size: 20,
-                distance: 50
-            }
-        }
-    }
 }
-
-// const ParticleParams = {
-//     polygon: {
-//       enable: true,
-//       type: "inside",
-//       move: {
-//         radius: 10
-//       },
-//       url: imagesvg
-//     }
-//   }
 
 export default ParticleParams
