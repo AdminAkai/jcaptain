@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './dropdown.css'
+// import './dropdown.css'
 
 export default class DropDown extends Component {
 
@@ -11,8 +11,6 @@ export default class DropDown extends Component {
                         <ul>
                             <li>
                                 <ul className="drop-menu menu-7">
-                                    <li>Test</li>
-                                    <li>Test2</li>
                                 </ul>
                             </li>
                         </ul>

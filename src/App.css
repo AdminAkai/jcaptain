@@ -1,9 +1,12 @@
-.App {
-  text-align: center;
+body {
 }
 
-.App-logo {
-  height: 40vmin;
+.App {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .App-header {

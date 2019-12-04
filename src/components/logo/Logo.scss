@@ -1,9 +1,13 @@
-.logo {
+.logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 400px;
-  margin-right: 135px;
+  height: 100%;	
+}
+
+.logo {
+	margin-bottom: 50px;
+	margin-right: 130px;
 }
 
 // .glitch {
