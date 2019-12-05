@@ -81,6 +81,16 @@
 // }
 
 
+.glitch-after {
+	text-transform: uppercase;
+	color: black;
+	font-size: 100px;
+	position: relative;
+	width: 400px;
+	margin: 0 auto;
+	cursor: default;
+}
+
 .glitch {
 	text-transform: uppercase;
 	color: white;
@@ -88,6 +98,13 @@
 	position: relative;
 	width: 400px;
 	margin: 0 auto;
+	cursor: pointer;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none;
   }
   @keyframes noise-anim {
 	$steps: 20;
@@ -106,7 +123,7 @@
 	text-shadow: -1px 0 red;
 	top: 0;
 	color: white;
-	background: #282c34;
+	background: #000000;
 	overflow: hidden;
 	animation: noise-anim 2s infinite linear alternate-reverse;
   }
@@ -128,7 +145,16 @@
 	text-shadow: 1px 0 blue;
 	top: 0;
 	color: white;
-	background: #282c34;
+	background: #000000;
 	overflow: hidden;
 	animation: noise-anim-2 15s infinite linear alternate-reverse;
+  }
+
+  @keyframes color {
+	0% {
+	  color: #ffffff;
+	}
+	100% {
+	  color: #000000;
+	}
   }

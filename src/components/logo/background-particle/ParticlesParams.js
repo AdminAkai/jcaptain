@@ -33,7 +33,7 @@ const ParticleParams = {
         type: "inline",
         move: {
             radius: 5
-        },
+        },  
         url: imagesvg,
         inline: {
             arrangement: "equidistant"
