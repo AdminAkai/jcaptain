@@ -3,83 +3,37 @@
   justify-content: center;
   align-items: center;
   height: 100%;	
+  width: 100%
 }
 
 .logo {
 	margin-bottom: 50px;
-	margin-right: 130px;
+	margin-right: 140px;
 }
 
-// .glitch {
-// 	font: {
-// 		size: 5.125em;
-//     font-family: "Varela", sans-serif;
-// 		weight: 600;
-//   }
-//   text-transform: uppercase;
-// 	text-decoration: none;
-// 	position: absolute;
-// 	top: 47.5%;
-// 	left: 47.2%;
-// 	transform: translate(-50%, -50%);
-// 	margin: 0;
-// 	color: #fff;
-// 	letter-spacing: 0.01em;
-	
-// 	&:before, &:after {
-// 		display: block;
-// 		content: attr(data-glitch);
-// 		position: absolute;
-// 		top: 0;
-// 		left: 0;
-// 		height: 100%;
-// 		width: 100%;
-// 		opacity: .8;
-// 	} &:after {
-// 		color: #f0f;
-// 		z-index: -2;
-// 	} &:before {
-// 		color: #0ff;
-// 		z-index: -1;
-// 	}
-// 	&:hover {
-// 		&:before {
-// 			animation: glitch .3s cubic-bezier(.25, .46, .45, .94) both 5
-// 		}
-// 		&:after {
-// 			animation: glitch .3s cubic-bezier(.25, .46, .45, .94) reverse both 5
-// 		}
-// 	}
-// }
+.image-controller {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
 
-// @media only screen and (max-width: 400px) {
-// 	.glitch {
-// 		font-size: 3em;
-// 	}
-// }
+.image-parent {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 120px;
+	margin-bottom: 50px;
+}
 
-
-// @keyframes glitch {
-// 	0% {
-// 		transform: translate(0)
-// 	}
-// 	20% {
-// 		transform: translate(-5px, 5px)
-// 	}
-// 	40% {
-// 		transform: translate(-5px, -5px)
-// 	}
-// 	60% {
-// 		transform: translate(5px, 5px)
-// 	}
-// 	80% {
-// 		transform: translate(5px, -5px)
-// 	}
-// 	to {
-// 		transform: translate(0)
-// 	}
-// }
-
+.image-icon {
+	width: 80px;
+	height: 80px;
+	margin: 20px;
+	cursor: pointer;
+}
 
 .glitch-after {
 	text-transform: uppercase;
@@ -89,6 +43,7 @@
 	width: 400px;
 	margin: 0 auto;
 	cursor: default;
+	pointer-events: none;
 }
 
 .glitch {
@@ -158,3 +113,51 @@
 	  color: #000000;
 	}
   }
+  
+
+  @keyframes fadeInUp {
+    0% {
+        transform: translate3d(0,40px,0);
+    }
+
+	50% {
+		opacity: 0;
+	}
+
+    100% {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        transform: translate3d(0,40px,0);
+	}
+
+	90% {
+		opacity: 0;
+	}
+
+    100% {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+}
+
+.animated {
+    animation-duration: 4s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-fill-mode: both;
+}
+
+.animatedFadeInUp {
+    opacity: 0;
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}

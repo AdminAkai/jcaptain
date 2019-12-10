@@ -1,5 +1,5 @@
 import React from 'react';
-import DropDown from './components/dropdown/DropDown'
+// import DropDown from './components/dropdown/DropDown'
 import Logo from './components/logo/Logo'
 import './App.css';
 
@@ -11,7 +11,6 @@ function App() {
       </div>
       <div>
         <Logo />
-        <DropDown />
       </div>
     </div>
   );

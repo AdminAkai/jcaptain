@@ -3,6 +3,8 @@ import './Logo.scss'
 import Particles from 'react-particles-js'
 import ParticleParams from './background-particle/ParticlesParams'
 import Background from './background-particle/Background'
+import GmailLogo from './background-particle/images/gmail.png'
+import LinkedInLogo from './background-particle/images/linkedin.png'
 
 export default class Logo extends Component {
 
@@ -25,6 +27,8 @@ export default class Logo extends Component {
                 background.style.animation = "background-color 4s ease";
                 activationLogo.style.animation = "color 4s ease";
                 setTimeout(this.changeBackgroundColor(background, activationLogo), 4000)
+                let Logo = document.getElementsByClassName("logo")[0]
+                Logo.style.marginRight = "140px"
             })
         })
     }
@@ -56,9 +60,17 @@ export default class Logo extends Component {
         <div className="logo-container">
             {this.state.activated 
             ?
-                <Particles params={this.state.particles} className='particles' />
+                <div className="image-controller">
+                    <Background activated={this.state.activated}/>
+                    <div className="image-controller">
+                        <div className="image-parent animatedFadeInUp animated fadeInUp">
+                            <img src={GmailLogo} className="image-icon" alt="gmail icon"></img>
+                            <a href="https://www.linkedin.com/in/josh-adrian-trinidad/" target="_blank"><img src={LinkedInLogo} className="image-icon" alt="linkedin icon"></img></a>
+                        </div>
+                    </div>
+                </div>
             :
-                <Background />
+                <Particles params={this.state.particles} className='particles' />
             }
             <div className="logo">
                 <div className="glitch" data-text="" onClick={this.activate} onMouseEnter={this.setGlitch} onMouseLeave={this.removeGlitch}>JC&lambda;pt&lambda;in</div> 
