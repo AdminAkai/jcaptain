@@ -5,7 +5,7 @@ import ParticleParams from './background-particle/ParticlesParams'
 import Background from './background-particle/Background'
 import GmailLogo from './background-particle/images/gmail.png'
 import LinkedInLogo from './background-particle/images/linkedin.png'
-import DockerLogo from './background-particle/images/docker.png'
+import DockerLogo from './background-particle/images/docker.svg'
 
 export default class Logo extends Component {
 
