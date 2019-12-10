@@ -6,6 +6,7 @@ import Background from './background-particle/Background'
 import GmailLogo from './background-particle/images/gmail.png'
 import LinkedInLogo from './background-particle/images/linkedin.png'
 import DockerLogo from './background-particle/images/docker.svg'
+import GithubLogo from './background-particle/images/github.png'
 
 export default class Logo extends Component {
 
@@ -68,6 +69,7 @@ export default class Logo extends Component {
                             <img src={GmailLogo} className="image-icon" alt="gmail icon"></img>
                             <a href="https://www.linkedin.com/in/josh-adrian-trinidad/" target="_blank"><img src={LinkedInLogo} className="image-icon" alt="linkedin icon"></img></a>
                             <a href="https://hub.docker.com/u/jcaptainnn" target="_blank"><img src={DockerLogo} className="image-icon" alt="linkedin icon"></img></a>
+                            <a href="https://github.com/JCaptainnnn" target="_blank"><img src={GithubLogo} className="image-icon" alt="linkedin icon"></img></a>
                         </div>
                     </div>
                 </div>
