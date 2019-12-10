@@ -67,9 +67,9 @@ export default class Logo extends Component {
                     <div className="image-controller">
                         <div className="image-parent animatedFadeInUp animated fadeInUp">
                             <img src={GmailLogo} className="image-icon" alt="gmail icon"></img>
-                            <a href="https://www.linkedin.com/in/josh-adrian-trinidad/" target="_blank"><img src={LinkedInLogo} className="image-icon" alt="linkedin icon"></img></a>
-                            <a href="https://hub.docker.com/u/jcaptainnn" target="_blank"><img src={DockerLogo} className="image-icon" alt="linkedin icon"></img></a>
-                            <a href="https://github.com/JCaptainnnn" target="_blank"><img src={GithubLogo} className="image-icon" alt="linkedin icon"></img></a>
+                            <a href="https://www.linkedin.com/in/josh-adrian-trinidad/" rel="noopener noreferrer" target="_blank"><img src={LinkedInLogo} className="image-icon" alt="linkedin icon"></img></a>
+                            <a href="https://hub.docker.com/u/jcaptainnn" rel="noopener noreferrer" target="_blank"><img src={DockerLogo} className="image-icon" alt="linkedin icon"></img></a>
+                            <a href="https://github.com/JCaptainnnn" rel="noopener noreferrer" target="_blank"><img src={GithubLogo} className="image-icon" alt="linkedin icon"></img></a>
                         </div>
                     </div>
                 </div>
