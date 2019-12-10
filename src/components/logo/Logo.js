@@ -5,6 +5,7 @@ import ParticleParams from './background-particle/ParticlesParams'
 import Background from './background-particle/Background'
 import GmailLogo from './background-particle/images/gmail.png'
 import LinkedInLogo from './background-particle/images/linkedin.png'
+import DockerLogo from './background-particle/images/docker.png'
 
 export default class Logo extends Component {
 
@@ -66,6 +67,7 @@ export default class Logo extends Component {
                         <div className="image-parent animatedFadeInUp animated fadeInUp">
                             <img src={GmailLogo} className="image-icon" alt="gmail icon"></img>
                             <a href="https://www.linkedin.com/in/josh-adrian-trinidad/" target="_blank"><img src={LinkedInLogo} className="image-icon" alt="linkedin icon"></img></a>
+                            <a href="https://hub.docker.com/u/jcaptainnn" target="_blank"><img src={DockerLogo} className="image-icon" alt="linkedin icon"></img></a>
                         </div>
                     </div>
                 </div>
