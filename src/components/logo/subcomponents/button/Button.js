@@ -17,7 +17,7 @@ export default class Button extends Component {
                 </svg>
                 </div>
                 <div className="projects">
-                    <a>
+                    <a href="https://jcaptainnnn.github.io/" rel="noopener noreferrer" target="_blank">
                         <div className="button-2">
                         <span>C&lambda;T CH&lambda;OS</span>
                             <svg>
@@ -26,20 +26,24 @@ export default class Button extends Component {
                         </svg>
                         </div>
                     </a>
-                    <div className="button-3">
-                    <span>SCHEDUL&lambda;R</span>
-                        <svg>
-                        <polyline className="o1" points="0 0, 150 0, 150 55, 0 55, 0 0"></polyline>
-                        <polyline className="o2" points="0 0, 150 0, 150 55, 0 55, 0 0"></polyline>
-                    </svg>
-                    </div>
-                    <div className="button-4">
-                    <span>IM&lambda;GE RECOG</span>
-                        <svg>
-                        <polyline className="o1" points="0 0, 150 0, 150 55, 0 55, 0 0"></polyline>
-                        <polyline className="o2" points="0 0, 150 0, 150 55, 0 55, 0 0"></polyline>
-                    </svg>
-                    </div>
+                    <a href="https://schedular-test-one.herokuapp.com/" rel="noopener noreferrer" target="_blank">
+                        <div className="button-3">
+                        <span>SCHEDUL&lambda;R</span>
+                            <svg>
+                            <polyline className="o1" points="0 0, 150 0, 150 55, 0 55, 0 0"></polyline>
+                            <polyline className="o2" points="0 0, 150 0, 150 55, 0 55, 0 0"></polyline>
+                        </svg>
+                        </div>
+                    </a>
+                    <a href="https://stack-with-clarifai.herokuapp.com/" rel="noopener noreferrer" target="_blank">
+                        <div className="button-4">
+                        <span>IM&lambda;GE RECOG</span>
+                            <svg>
+                            <polyline className="o1" points="0 0, 150 0, 150 55, 0 55, 0 0"></polyline>
+                            <polyline className="o2" points="0 0, 150 0, 150 55, 0 55, 0 0"></polyline>
+                        </svg>
+                        </div>
+                    </a>
                 </div>
             </div>
         )
