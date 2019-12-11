@@ -13,7 +13,8 @@ export default class Logo extends Component {
 
     state = {
         activated: false,
-        particles: ParticleParams
+        particles: ParticleParams,
+        emailActivated: false
     }
 
     activate = (event) => {
@@ -34,6 +35,11 @@ export default class Logo extends Component {
                 Logo.style.marginRight = "140px"
             })
         })
+    }
+
+    showEmail = (event) => {
+        event.preventDefault()
+        this.setState({emailActivated: !this.state.emailActivated})
     }
 
     setGlitch = () => {
@@ -67,7 +73,7 @@ export default class Logo extends Component {
                     <Background activated={this.state.activated}/>
                     <div className="image-controller">
                         <div className="image-parent animatedFadeInUp animated fadeInUp">
-                            <img src={GmailLogo} className="image-icon" alt="gmail icon"></img>
+                            <img src={GmailLogo} className="image-icon" alt="gmail icon" onClick={this.showEmail}></img>
                             <a href="https://www.linkedin.com/in/josh-adrian-trinidad/" rel="noopener noreferrer" target="_blank"><img src={LinkedInLogo} className="image-icon" alt="linkedin icon"></img></a>
                             <a href="https://hub.docker.com/u/jcaptainnn" rel="noopener noreferrer" target="_blank"><img src={DockerLogo} className="image-icon" alt="linkedin icon"></img></a>
                             <a href="https://github.com/JCaptainnnn" rel="noopener noreferrer" target="_blank"><img src={GithubLogo} className="image-icon" alt="linkedin icon"></img></a>
@@ -86,6 +92,14 @@ export default class Logo extends Component {
             <div className="logo">
                 <div className="glitch" data-text="" onClick={this.activate} onMouseEnter={this.setGlitch} onMouseLeave={this.removeGlitch}>JC&lambda;pt&lambda;in</div> 
             </div>
+            {this.state.emailActivated
+            ?
+            <div className="email">
+                <p className="animatedFadeInUp2 animated2 fadeInUp2">jtrinidadwork@gmail.com</p>
+            </div>
+            :
+            null
+            }
         </div>
         )
     }
