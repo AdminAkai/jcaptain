@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import './Logo.scss'
 import Particles from 'react-particles-js'
 import ParticleParams from './background-particle/ParticlesParams'
-import Background from './background-particle/Background'
+import Background from './background-particle/background/Background'
 import GmailLogo from './background-particle/images/gmail.png'
 import LinkedInLogo from './background-particle/images/linkedin.png'
 import DockerLogo from './background-particle/images/docker.svg'
 import GithubLogo from './background-particle/images/github.png'
+import Button from './subcomponents/button/Button'
 
 export default class Logo extends Component {
 
@@ -75,6 +76,12 @@ export default class Logo extends Component {
                 </div>
             :
                 <Particles params={this.state.particles} className='particles' />
+            }
+            {this.state.activated
+            ?
+            <Button />
+            :
+            null
             }
             <div className="logo">
                 <div className="glitch" data-text="" onClick={this.activate} onMouseEnter={this.setGlitch} onMouseLeave={this.removeGlitch}>JC&lambda;pt&lambda;in</div> 

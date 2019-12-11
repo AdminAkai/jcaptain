@@ -3,12 +3,14 @@
   justify-content: center;
   align-items: center;
   height: 100%;	
-  width: 100%
+  width: 100%;
+  z-index: -1;
 }
 
 .logo {
-	margin-bottom: 50px;
-	margin-right: 140px;
+	position: fixed;
+	padding-bottom: 50px;
+	padding-right: 140px;
 }
 
 .image-controller {
@@ -36,6 +38,7 @@
 }
 
 .glitch-after {
+	position: absolute;
 	text-transform: uppercase;
 	color: black;
 	font-size: 100px;

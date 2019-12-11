@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Particles from 'react-particles-js'
-import ParticleParams from './ParticlesParams'
+import ParticleParams from '../ParticlesParams'
 import "./background.css"
 
 export default class Background extends Component {
