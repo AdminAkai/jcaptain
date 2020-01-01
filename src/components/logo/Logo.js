@@ -14,7 +14,13 @@ export default class Logo extends Component {
     state = {
         activated: false,
         particles: ParticleParams,
-        emailActivated: false
+        emailActivated: false,
+        currentWidth: 0,
+    }
+
+    getScreenWidth = () => {
+        const currentWidth = window.innerWidth
+        this.setState(currentWidth)
     }
 
     activate = (event) => {
